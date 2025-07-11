@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>かたちパズル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>かたちパズル</h1>
+  <p>正しい形をドラッグしてね！</p>
+
+
+  <div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<div class="star star1">★</div>
+<div class="star star2">★</div>
+<div class="star star3">★</div>
+
+<div class="character"></div>
+  <div id="game-settings">
+    <label>ステージ数:
+      <select id="stageCount">
+        <option value="5">5問</option>
+        <option value="10">10問</option>
+        <option value="15">15問</option>
+      </select>
+    </label>
+    <label>難易度:
+      <select id="difficulty">
+        <option value="easy">やさしい（20秒）</option>
+        <option value="normal" selected>ふつう（15秒）</option>
+        <option value="hard">むずかしい（10秒）</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="game-info">
+    <span id="score">スコア: 0</span> |
+    <span id="timer">のこり: 15秒</span> |
+    <span id="stage">1 / 5</span>
+  </div>
+
+  <div class="puzzle-container">
+    <div id="slot" class="shape">⬜</div>
+  </div>
+
+  <div class="puzzle-container" id="blocks">
+    <div class="shape draggable" draggable="true" id="circle">⚪</div>
+    <div class="shape draggable" draggable="true" id="square">⬜</div>
+    <div class="shape draggable" draggable="true" id="triangle">🔺</div>
+    <div class="shape draggable" draggable="true" id="star">⭐</div>
+    <div class="shape draggable" draggable="true" id="heart">❤️</div>
+  </div>
+
+  <p id="result"></p>
+  <button id="restartBtn">ゲームスタート／もう一回</button>
+
+  <script src="saisyu.js"></script>
+</body>
+</html>
